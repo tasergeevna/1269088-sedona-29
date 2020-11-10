@@ -4,9 +4,152 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+  <body class="page-body">
+    <header class="main-header">
+      <div class="top-bar">
+        <div class="full-wrapper">
+          <img src="" width="" height="" alt="Логотип города Седона">
+          <nav class="main-nav">
+            <ul class="left-nav">
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Фото и видео</a></li>
+            </ul>
+            <ul class="right-nav">
+              <li><a href="#">Карта штата</a></li>
+              <li><a href="#">Гостиницы</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header-text-wrapper">
+        <h1 class="visually-hidden">Сайт города Седона в штате Аризона</h1>
+        <svg aria-label="Вступительные слова и слоган"></svg>
+      </div>
+    </header>
+    <main>
+      <section class="profits-section">
+        <h2 class="visually-hidden">Почему стоит приехать в Седону</h2>
+        <div class="centered-wrapper">
+          <p class="profits-tagline">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
+          <p class="simple-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
+        <ul class="profits-list">
+          <li class="profit-first">
+            <span class="profit-tag">Настоящий городок</span>
+            <span>— №1 —</span>
+            <p class="simple-text">Седона - не аттракцион для туристов, там<br>течёт своя жизнь</p>
+          </li>
+          <li class="profit-second">
+            <span class="profit-tag">Там есть<br>Мост дьявола</span>
+            <span>— №2 —</span>
+            <p class="simple-text">Да, по нему можно пройти! Если, конечно,<br>вы осмелитесь</p>
+          </li>
+          <li class="profit-third">
+            <span class="profit-tag">Небольшая<br>площадь</span>
+            <span>— №3 —</span>
+            <p class="simple-text">Все достопримечательности<br>находятся очень близко</p>
+          </li>
+          <li class="profit-fourth">
+            <span class="profit-tag">Красивая<br>дорога</span>
+            <span>— №4 —</span>
+            <p class="simple-text">Ехать в Седону из Лас-Вегаса совсем<br>не скучно!</p>
+          </li>
+          <li class="profit-fifth">
+            <span class="profit-tag">Мало<br>туристов</span>
+            <span>— №5 —</span>
+            <p class="simple-text">Большинство едет в Гранд-Каньон<br>и толпится там</p>
+          </li>
+        </ul>
+        <ul class="promo-list">
+          <li>
+            <a href="#">Жильё</a>
+            <p class="simple-text">Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
+          </li>
+          <li>
+            <a href="#">Еда</a>
+            <p class="simple-text">Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
+          </li>
+          <li>
+            <a href="#">Сувениры</a>
+            <p class="simple-text">Не только китайского, но и местного<br>производства!</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Подобрать гостиницу в Седоне</h2>
+        <div class="centered-wrapper">
+          <span>Заинтересовались?</span>
+          <p class="simple-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <button type="button">Поиск гостиницы в Седоне</button>
+          <div class="modal modal-search">
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p class="input-wrapper">
+                <label for="date-in-input">Дата заезда:</label>
+                <input type="date" id="date-in-input">
+              </p>
+              <p class="input-wrapper">
+                <label for="date-out-input">Дата выезда:</label>
+                <input type="date" id="date-out-input">
+              </p>
+              <div class="input-numbers-wrapper">
+                <p class="input-wrapper">
+                  <label for="adults-number">Взрослые:</label>
+                  <input type="number" id="adults-number" min="1" max="30">
+                </p>
+                <p class="input-wrapper">
+                  <label for="kids-number">Дети:</label>
+                  <input type="number" id="kids-number" min="0" max="30">
+                </p>
+              </div>
+              <button class="basic-button submit-button" type="submit">Найти</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+      <section class="map">
+        <img src="" width="" height="" alt="Карта города Седона и близлежащей местности">
+      </section>
+    </main>
 
+    <footer>
+      <div class="footer-bar">
+        <div class="full-wrapper">
+          <div class="contacts">
+            <span>#visitsedona</span>
+            <a class="footer-phone" href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
+          </div>
+          <div class="socials">
+            <ul class="footer-socials">
+              <li>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Twitter</span>
+                  <svg></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Facebook</span>
+                  <svg></svg>>
+                </a>
+              </li>
+              <li>
+                <a class="social-button" href="#">
+                  <span class="visually-hidden">Youtube</span>
+                  <svg></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <span>Website by</span>
+            <a class="copyright-logo" href="htmlacademy.ru">
+              <span class="visually-hidden">Логотип HTML Academy</span>
+              <svg></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
