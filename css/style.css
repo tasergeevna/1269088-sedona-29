@@ -1,0 +1,165 @@
+/* Fonts */
+
+/* pt-sans-regular */
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Sans"), local("PTSans-Regular"),
+        url("../fonts/pt-sans-v12-latin_cyrillic-regular.woff2") format("woff2"),
+        url("../fonts/pt-sans-v12-latin_cyrillic-regular.woff") format("woff");
+}
+
+/* pt-sans-700 */
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Sans Bold"), local("PTSans-Bold"),
+        url("../fonts/pt-sans-v12-latin_cyrillic-700.woff2") format("woff2"),
+        url("../fonts/pt-sans-v12-latin_cyrillic-700.woff") format("woff");
+}
+
+/*Variables*/
+
+:root {
+
+  /* Main page colors */
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-blue: #81b3d2;
+    --basic-beige: #eeeeee;
+    --text-beige: #333333;
+    --button-blue: #81b3d2;
+    --button-brown: #766357;
+    --logo-brown: #231f20;
+    --soft-back-gray: #f2f2f2;
+    --modal-gray: #a9a9a9;
+    --modal-shadow: rgba(0, 0, 0, 0.0001);
+    --body-shadow: rgba(0, 0, 0, 0.25);
+
+  /* Catalog additional colors */
+    --soft-gray: #e5e5e5;
+    --rate-text-gray: #666666;
+
+  /* Conditions colors */
+    --active-page: #766357;
+    --checkbox-blocked: #6a6a6a;
+    --ease-arrow: #cacaca;
+    --basic-button-focus: #669ec0;
+    --basic-button-active: #5496bd;
+    --brown-button-focus: #604e43;
+    --brown-button-active: #503e33;
+    --back-gray-focus: #ebebeb;
+    --logo-academy-active: #bdbbbc;
+}
+
+
+/* Global */
+
+body {
+  width: 100%;
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+}
+
+.page {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.full-wrapper {
+  max-width: 1054px;
+}
+
+.centered-wrapper {
+  max-width: 520px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.display-none {
+  display: none;
+}
+
+
+/* Header */
+
+.main-nav ul {
+    margin: 0;
+    padding: 0 28px;
+    list-style: none;
+}
+
+.main-nav a {
+    display: block;
+    font-weight: 700;
+}
+
+.header-text-wrapper {
+    max-width: 1200px;
+    min-height: 509px;
+    background-color: var(--basic-black);
+    background-image: url("../img/header-back.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.city-tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Hotels page */
+
+.filter-section {
+    max-width: 1200px;
+    min-height: 217px;
+    background-color: var(--basic-black);
+    background-image: url("../img/filter-back.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    color: var(--basic-white);
+}
+
+.filter-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 66px;
+}
+
+.fieldset-wrapper:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 119px;
+}
+
