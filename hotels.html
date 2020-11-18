@@ -9,8 +9,9 @@
   <body class="page-body">
     <header class="main-header">
       <div class="top-bar">
-        <div class="full-wrapper">
-          <img class="main-logo" src="img/main-logo.svg" width="66" height="55" alt="Логотип города Седона">
+        <div class="full-wrapper position-relative">
+          <div class="main-logo-wrapper"></div>
+          <img class="main-logo" src="img/main-logo.svg" width="120" height="90" alt="Логотип города Седона">
           <nav class="main-nav">
             <ul class="left-nav">
               <li><a href="#">Информация</a></li>
@@ -27,6 +28,7 @@
 
     <main>
       <section class="filter-section">
+        <h2 class="visually-hidden">Поиск жилья по фильтру</h2>
         <div class="full-wrapper">
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru" target="_blank">
             <div class="fieldset-wrapper">
@@ -90,11 +92,12 @@
         </div>
       </section>
 
-      <section class="sorting-section">
-        <div class="full-wrapper">
+
+      <div class="full-wrapper">
+        <section class="sorting-section">
           <span class="result-filtering">Найдено: 3</span>
           <div class="sorting-section-wrapper">
-            <h2 class="sorting-title">Сортировка:</h2>
+            <h3 class="sorting-title">Сортировка:</h3>
             <ul class="sorting-section-list">
               <li>
                   <button class="catalog-link sorting-button" type="button">
@@ -117,112 +120,123 @@
               <button class="arrow-sorting-down" type="button" aria-label="Сортировка по убыванию"></button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
 
       <section class="offers-filtering">
         <h2 class="visually-hidden">Результаты поиска гостиниц</h2>
-        <div class="full-wrapper">
           <ul class="offers-filtering-list">
-            <li class="offers-filtering-item">
-              <img class="hotel-pic" src="img/hotel-amara.jpg" width="135" height="90" alt="Домики с барбекю и бассейном под красными горами">
-              <div class="hotel-description">
-                <h3 class="hotel-name">Amara Resort & Spa</h3>
-                <div class="hotel-desc-left">
-                  <span>Гостиница</span>
-                  <a class="basic-button" href="#">Подробнее</a>
+            <li>
+              <div class="full-wrapper offers-filtering-item">
+                <img class="hotel-pic" src="img/hotel-amara.jpg" width="135" height="90" alt="Домики с барбекю и бассейном под красными горами">
+                <div class="hotel-description">
+                  <h4 class="hotel-name">Amara Resort & Spa</h4>
+                  <div class="hotel-desc">
+                    <div class="hotel-desc-left">
+                      <span>Гостиница</span>
+                      <a class="basic-button details-button" href="#">Подробнее</a>
+                    </div>
+                    <div class="hotel-desc-right">
+                      <span>От 4000 р.</span>
+                      <a class="basic-button booking-button" href="#">Забронировать</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="hotel-desc-right">
-                  <span>От 4000 р.</span>
-                  <a href="#">Забронировать</a>
+                <div class="hotel-rate">
+                  <div class="stars-rate">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                  </div>
+                  <span class="numeral-rate">Рейтинг: 8,5</span>
                 </div>
-              </div>
-              <div class="hotel-rate">
-                <div class="stars-rate">
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                </div>
-                <span>Рейтинг: 8,5</span>
               </div>
             </li>
-            <li class="offers-filtering-item">
-              <img class="hotel-pic" src="img/hotel-desert.jpg" width="135" height="90" alt="Вывеска крупным планом перед отелем с большой парковкой">
-              <div class="hotel-description">
-                <h3 class="hotel-name">Desert Quail Inn</h3>
-                <div class="hotel-desc-left">
-                  <span>Мотель</span>
-                  <a class="basic-button" href="#">Подробнее</a>
+            <li>
+              <div class="full-wrapper offers-filtering-item">
+                <img class="hotel-pic" src="img/hotel-desert.jpg" width="135" height="90" alt="Вывеска крупным планом перед отелем с большой парковкой">
+                <div class="hotel-description">
+                  <h4 class="hotel-name">Desert Quail Inn</h4>
+                  <div class="hotel-desc">
+                    <div class="hotel-desc-left">
+                      <span>Мотель</span>
+                      <a class="basic-button details-button" href="#">Подробнее</a>
+                    </div>
+                    <div class="hotel-desc-right">
+                      <span>От 3000 р.</span>
+                      <a class="basic-button booking-button" href="#">Забронировать</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="hotel-desc-right">
-                  <span>От 3000 р.</span>
-                  <a href="#">Забронировать</a>
+                <div class="hotel-rate">
+                  <div class="stars-rate">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                  </div>
+                  <span class="numeral-rate">Рейтинг: 8,9</span>
                 </div>
-              </div>
-              <div class="hotel-rate">
-                <div class="stars-rate">
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                </div>
-                <span>Рейтинг: 8,9</span>
               </div>
             </li>
-            <li class="offers-filtering-item">
-              <img class="hotel-pic" src="img/hotel-villas.jpg" width="135" height="90" alt="Одноэтажный комплекс под деревьями на большой зеленой лужайке">
-              <div class="hotel-description">
-                <h3 class="hotel-name">Villas at Poco Diablo</h3>
-                <div class="hotel-desc-left">
-                  <span>Апартаменты</span>
-                  <a class="basic-button" href="#">Подробнее</a>
+            <li>
+              <div class="full-wrapper offers-filtering-item">
+                <img class="hotel-pic" src="img/hotel-villas.jpg" width="135" height="90" alt="Одноэтажный комплекс под деревьями на большой зеленой лужайке">
+                <div class="hotel-description">
+                  <h4 class="hotel-name">Villas at Poco Diablo</h4>
+                  <div class="hotel-desc">
+                    <div class="hotel-desc-left">
+                      <span>Апартаменты</span>
+                      <a class="basic-button details-button" href="#">Подробнее</a>
+                    </div>
+                    <div class="hotel-desc-right">
+                      <span>От 2000 р.</span>
+                      <a class="basic-button booking-button" href="#">Забронировать</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="hotel-desc-right">
-                  <span>От 2000 р.</span>
-                  <a href="#">Забронировать</a>
+                <div class="hotel-rate">
+                  <div class="stars-rate">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+                    </svg>
+                  </div>
+                  <span class="numeral-rate">Рейтинг: 9,2</span>
                 </div>
-              </div>
-              <div class="hotel-rate">
-                <div class="stars-rate">
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-                  </svg>
-                </div>
-                <span>Рейтинг: 9,2</span>
               </div>
             </li>
           </ul>
-        </div>
       </section>
     </main>
 
     <footer>
       <div class="footer-bar">
-        <div class="full-wrapper">
+        <div class="full-wrapper footer-wrapper">
           <div class="contacts">
             <span>#visitsedona</span>
             <a class="footer-phone" href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
           </div>
           <div class="socials">
             <ul class="footer-socials">
-              <li>
+              <li class="social-wrapper">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Twitter</span>
                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -230,7 +244,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="social-wrapper">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Facebook</span>
                   <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -238,7 +252,7 @@
                   </svg>
                 </a>
               </li>
-              <li>
+              <li class="social-wrapper">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Youtube</span>
                   <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
