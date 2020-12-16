@@ -36,7 +36,7 @@
     --logo-brown: #231f20;
     --soft-back-gray: #f2f2f2;
     --modal-gray: #a9a9a9;
-    --modal-shadow: rgba(0, 0, 0, 0.0001);
+    --modal-shadow: rgba(0, 0, 0, 0.15);
     --body-shadow: rgba(0, 0, 0, 0.25);
 
   /* Catalog additional colors */
@@ -129,17 +129,14 @@ img {
 
 .main-logo-wrapper {
     position: absolute;
-    left: 470px;
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-top: 65px solid var(--main-logo-blue);
-}
-
-.main-logo {
-    position: absolute;
-    left: 470px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 3;
+    width: 138px;
+    height: 80px;
 }
 
 .main-nav ul {
@@ -148,11 +145,23 @@ img {
     list-style: none;
 }
 
-.main-nav a {
+.nav-link {
     display: block;
     padding: 15px 0;
     font-weight: 700;
     color: var(--basic-black);
+}
+
+.nav-link:hover {
+    color: var(--basic-blue);
+}
+
+.nav-link:focus {
+    color: var(--basic-blue);
+}
+
+.nav-link:active {
+    color: var(--body-shadow);
 }
 
 .main-nav {
@@ -170,13 +179,40 @@ img {
     justify-items: right;
 }
 
-.header-text-wrapper {
+
+/* Main */
+
+.slogan-section {
     max-width: 1200px;
     min-height: 509px;
     background-color: var(--basic-black);
     background-image: url("../img/header-back.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    position: relative;
+}
+
+.slogan-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid var(--basic-white);
+    border-right: 600px solid transparent;
+    z-index: 2;
+}
+
+.slogan-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 57px solid var(--basic-white);
+  border-left: 600px solid transparent;
+  z-index: 2;
 }
 
 .city-tagline {
@@ -194,7 +230,29 @@ img {
     padding-top: 53px;
 }
 
-/* Main */
+.profits-section::before {
+    content: "";
+    position: absolute;
+    top: -99px;
+    left: 250px;
+    width: 0;
+    height: 0;
+    border-bottom: 57px solid var(--basic-white);
+    border-right: 350px solid transparent;
+    z-index: 5;
+}
+
+.profits-section::after {
+  content: "";
+  position: absolute;
+  top: -99px;
+  right: 250px;
+  width: 0;
+  height: 0;
+  border-bottom: 57px solid var(--basic-white);
+  border-left: 350px solid transparent;
+  z-index: 5;
+}
 
 .profits-tagline {
     margin: 42px 0 20px 0;
@@ -207,6 +265,12 @@ img {
     font-size: 21px;
     line-height: 21px;
     font-weight: 700;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.profit-number {
+    padding-bottom: 23px;
 }
 
 .profit-illustrated {
@@ -224,32 +288,33 @@ img {
     margin-top: 51px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    list-style: none;
+    grid-template-rows: 1fr minmax(330px) 1fr 1fr;
 }
 
 .promo-list {
     padding: 0;
     margin: 0;
+    min-height: 330px;
     list-style: none;
     grid-column: 1/4;
+    grid-row: 2/3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: var(--basic-white);
 }
 
 .profit-item {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .profit-first {
     grid-column: 1/4;
-    grid-row: 1/3;
+    grid-row: 1/2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
 }
 
 .profit-first-wrapper {
@@ -264,12 +329,51 @@ img {
 
 .promo-item a {
     color: var(--basic-black);
+    margin-top: 100px;
 }
 
 .promo-item {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.profit-home::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 162px;
+    width: 75px;
+    height: 72px;
+    background-image: url("../img/icon-home.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.profit-food::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 162px;
+    width: 75px;
+    height: 70px;
+    background-image: url("../img/icon-food.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.profit-gifts::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 162px;
+    width: 64px;
+    height: 77px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .profit-second {
@@ -287,13 +391,34 @@ img {
     grid-column: 3/4;
 }
 
-.search-tagline {
-  font-weight: 700;
+.profits-gray {
+  grid-column: 1/4;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--basic-beige);
+}
 
+.profits-gray .profit-item {
+    padding: 47px 5px 54px 5px;
+}
+
+.search-text {
+    padding: 57px 5px;
+}
+
+.search-tagline {
+    font-size: 30px;
+}
+
+.search-text .simple-text {
+    line-height: 24px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .modal-show-button {
-    width: 568px;
+    min-width: 568px;
     padding: 30px;
     color: var(--basic-white);
     background-color: var(--button-brown);
@@ -305,17 +430,36 @@ img {
     border: none;
 }
 
+.modal-show-button:hover {
+    background-color: var(--brown-button-focus);
+}
+
+.modal-show-button:focus {
+    background-color: var(--brown-button-focus);
+}
+
+.modal-show-button:active {
+    background-color: var(--brown-button-active);
+    color: var(--body-shadow);
+}
+
 .modal-search {
     background-color: var(--basic-white);
     width: 568px;
-    min-height: 395px;
     z-index: 2;
     font-weight: 700;
+    position: absolute;
+    top: 300px;
+    left: 316px;
+    z-index: 4;
+    box-shadow: 0px 7px 15px var(--modal-shadow);
+
 }
 
 .modal-search-button {
-    width: 458px;
+    min-width: 458px;
     padding: 16px;
+    margin: 55px;
     color: var(--basic-white);
     background-color: var(--basic-blue);
     font-family: "PT Sans", "Arial", sans-serif;
@@ -326,27 +470,95 @@ img {
     border: none;
 }
 
+.modal-search-button:hover {
+    background-color: var(--basic-button-focus);
+}
+
+.modal-search-button:focus {
+    background-color: var(--basic-button-focus);
+}
+
+.modal-search-button:active {
+    background-color: var(--basic-button-active);
+    color: var(--body-shadow);
+    box-shadow: 0px 4px 4px var(--body-shadow);
+}
+
+.search-form {
+    margin: 55px 55px 0 55px;
+}
+
+.input-numbers-wrapper {
+   display: flex;
+   justify-content: space-around;
+}
+
+.input-search {
+    border: none;
+    padding: 6px 13px;
+    background-color: var(--soft-back-gray);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.input-search-date {
+    width: 346px;
+}
+
+.empty-button {
+    border: none;
+    background-color: inherit;
+}
+
+.search-label {
+    margin-right: 15px;
+}
+
+.input-search-people {
+    width: 114px;
+}
+
 /* Footer */
 
-.footer-bar {
+.any-footer {
+    width: 1200px;
+    background-color: var(--basic-white);
+}
+
+.index-footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
     opacity: 90%;
 }
 
 .footer-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 23px 0 36px 0;
+}
 
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--basic-black);
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.footer-phone {
+    color: var(--basic-black);
 }
 
 .footer-socials {
     list-style: none;
     display: inline-flex;
-
 }
 
-.social-wrapper {
+.social-button {
     width: 46px;
     height: 46px;
     background-color: var(--basic-blue);
@@ -355,10 +567,64 @@ img {
     align-items: center;
 }
 
+.social-button:hover {
+    background-color: var(--basic-button-focus);
+}
+
+.social-button:focus {
+    background-color: var(--basic-button-focus);
+}
+
+.social-button:active {
+    background-color: var(--basic-button-active);
+    color: var(--body-shadow);
+}
+
 .social-wrapper:not(:last-child) {
    margin-right: 6px;
 }
 
+.social-icon {
+    padding-top: 3px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright-logo {
+    margin-left: 8px;
+    color: var(--logo-brown);
+}
+
+.icon-copy-logo {
+    fill: currentColor;
+}
+
+.copyright-logo:hover {
+    color: var(--basic-blue);
+}
+
+.icon-copy-logo:hover {
+    fill: currentColor;
+}
+
+.copyright-logo:focus {
+    color: var(--basic-blue);
+}
+
+.icon-copy-logo:focus {
+    fill: currentColor;
+}
+
+.copyright-logo:active {
+    color: var(--logo-academy-active);
+}
+
+.icon-copy-logo:active {
+    fill: currentColor;
+}
 
 /* Hotels page */
 
@@ -474,7 +740,7 @@ img {
 }
 
 .offers-filtering-list li:last-of-type {
-    border-bottom: 2px solid var(--soft-gray);
+    border-bottom: 2px solid var(--basic-black);
 }
 
 .offers-filtering-item {
@@ -487,6 +753,19 @@ img {
     margin: 0;
     font-weight: 700;
     font-size: 21px;
+    color: var(--basic-black);
+}
+
+.hotel-name:hover {
+    color: var(--basic-blue);
+}
+
+.hotel-name:focus {
+    color: var(--basic-blue);
+}
+
+.hotel-name:active {
+    color: var(--body-shadow);
 }
 
 .hotel-desc {
@@ -526,12 +805,39 @@ img {
     text-align: center;
 }
 
+.details-button:hover {
+    background-color: var(--basic-button-focus);
+}
+
+.details-button:focus {
+    background-color: var(--basic-button-focus);
+}
+
+.details-button:active {
+    background-color: var(--basic-button-active);
+    color: var(--body-shadow);
+}
+
 .booking-button {
     background-color: var(--button-brown);
     min-width: 142px;
     padding: 3px;
     text-align: center;
 }
+
+.booking-button:hover {
+    background-color: var(--brown-button-focus);
+}
+
+.booking-button:hover {
+    background-color: var(--brown-button-focus);
+}
+
+.booking-button:active {
+    background-color: var(--brown-button-active);
+    color: var(--body-shadow);
+  }
+
 
 .numeral-rate {
   min-width: 110px;
