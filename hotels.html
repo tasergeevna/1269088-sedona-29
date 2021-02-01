@@ -20,7 +20,7 @@
             </ul>
             <ul class="right-nav">
               <li><a class="nav-link" href="blank.html" aria-label="Перейти на страницу c картой">Карта штата</a></li>
-              <li><a class="nav-link" aria-label="Текущий раздел сайта о гостиницах">Гостиницы</a></li>
+              <li><a class="nav-link current-page" aria-label="Текущий раздел сайта о гостиницах">Гостиницы</a></li>
             </ul>
           </nav>
         </div>
@@ -36,15 +36,15 @@
               <fieldset>
                 <legend class="legend-heading">Инфраструктура:</legend>
                     <ul>
-                      <li class="filter-checkbox">
+                      <li class="filter-hotel filter-checkbox">
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" id="swimmingpool" name="Бассейн" checked>
                         <label for="swimmingpool">Бассейн</label>
                       </li>
-                      <li class="filter-checkbox">
+                      <li class="filter-hotel filter-checkbox">
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" id="parking" name="Парковка">
                         <label for="parking">Парковка</label>
                       </li>
-                      <li class="filter-checkbox">
+                      <li class="filter-hotel filter-checkbox">
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" id="wifi" name="Wi-fi">
                         <label for="wifi">Wi-fi</label>
                       </li>
@@ -53,15 +53,15 @@
               <fieldset>
                 <legend class="legend-heading">Тип жилья:</legend>
                     <ul>
-                      <li class="filter-checkbox">
+                      <li class="filter-hotel filter-checkbox">
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" id="hotel" name="Гостиница" checked>
                         <label for="hotel">Гостиница</label>
                       </li>
-                      <li class="filter-checkbox">
+                      <li class="filter-hotel filter-checkbox">
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" id="motel" name="Мотель" checked>
                         <label for="motel">Мотель</label>
                       </li>
-                      <li class="filter-checkbox">
+                      <li class="filter-hotel filter-checkbox">
                         <input class="visually-hidden filter-input-checkbox" type="checkbox" id="apartments" name="Апартаменты" checked>
                         <label for="apartments">Апартаменты</label>
                       </li>
@@ -69,25 +69,27 @@
               </fieldset>
             </div>
             <div class="fieldset-wrapper">
-              <fieldset>
+              <fieldset class="price-filtering">
                 <legend class="legend-heading">Стоимость в сутки (Р):</legend>
-                <div class="price-controls">
-                  <label class="min-price">
-                    <input type="number" name="min-price" value="0" placeholder="от 0">
-                  </label>
-                  <label class="max-price">
-                    <input type="number" name="max-price" value="3000" placeholder="до 3000">
-                  </label>
-                </div>
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
+                <div class="flex-centered">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      <input class="input-price" type="text" id="min-price" value="От 0">
+                    </label>
+                    <label class="max-price">
+                      <input class="input-price" type="text" id="max-price" value="До 3000">
+                    </label>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0" aria-label="Снизить цену"></div>
-                  <div class="toggle toggle-max" tabindex="0" aria-label="Увеличить цену"></div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" aria-label="Снизить цену"></div>
+                    <div class="toggle toggle-max" tabindex="0" aria-label="Увеличить цену"></div>
+                  </div>
                 </div>
+                <button class="submit-button" type="submit">Показать</button>
               </fieldset>
-              <button type="submit">Показать</button>
             </div>
           </form>
         </div>
@@ -102,7 +104,7 @@
             <ul class="sorting-section-list">
               <li>
                   <button class="catalog-link sorting-button" type="button">
-                    <span class="sorting-button-text">По цене</span>
+                    <span class="sorting-button-text selected-sorting">По цене</span>
                   </button>
               </li>
               <li>
@@ -271,3 +273,5 @@
         </div>
       </div>
     </footer>
+  </body>
+</html>
